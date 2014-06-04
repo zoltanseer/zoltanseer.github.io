@@ -2,10 +2,61 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>zoltanseer.github.io</title>
+	
+	<title>Zoltan Seer's playground | zoltanseer.info</title>
+	<meta property="og:title" content="Zoltan Seer">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://www.zoltanseer.info">
+	<meta property="og:image" content="">
+	<meta property="og:site_name" content="Zoltan Seer's playground | zoltanseer.info">
+	<meta property="og:description" content="Zoltan Seer's playground is currently under construction ... but in the next 0.1-2^6 years, you will find here interesting things.">
+
+	<link href='http://fonts.googleapis.com/css?family=Raleway:100,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css">
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			font-family: 'Raleway', sans-serif;
+		}
+		h1 {
+			font-size: 90px;
+			color: #2e608b;
+			font-weight: 100;
+			text-transform: uppercase;
+			-webkit-font-smoothing: antialiased;
+		}
+		p {
+			font-size: 25px;
+			color: #2e608b;
+			font-weight: 300;
+		}
+		.loader-container {
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate3d(-50%, -60%, 0);
+			-moz-transform: translate3d(-50%, -60%, 0);
+			transform: translate3d(-50%, -60%, 0);
+			text-align: center;
+		}
+
+		.loader {
+			width: 128px;
+			height: 128px;
+			margin: 0 auto;
+			background: url("assets/img/preloader.gif") no-repeat center center;
+		}
+	</style>
 </head>
 <body>
-	<h1>Working on this...</h1>
-	<p>...hosted on GitHub</p>
+	<div class="loader-container">
+		<h1 class="animated fadeInDown">loading...</h1>
+		<div class="loader animated fadeIn"></div>
+		<p class="animated fadeInUp">... the idea of some awesomeness</p>
+	</div>
 </body>
 </html>
