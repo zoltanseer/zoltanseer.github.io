@@ -11,6 +11,8 @@
 	<meta property="og:site_name" content="Zoltan Seer's playground | zoltanseer.info">
 	<meta property="og:description" content="Zoltan Seer's playground is currently under construction ... but in the next 0.1-2^6 years, you will find here interesting things.">
 
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
 	<link href='http://fonts.googleapis.com/css?family=Raleway:100,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css">
@@ -28,10 +30,15 @@
 			text-transform: uppercase;
 			-webkit-font-smoothing: antialiased;
 		}
+
 		p {
 			font-size: 25px;
 			color: #2e608b;
 			font-weight: 300;
+		}
+		@media all and (max-width: 640px) {
+			h1 { font-size: 50px; }
+			p { font-size: 24px;}
 		}
 		.loader-container {
 			display: inline-block;
