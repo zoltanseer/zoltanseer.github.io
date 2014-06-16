@@ -25,12 +25,13 @@
 		<div class="loader animated fadeIn"></div>
 		<p class="animated fadeInUp">... the idea of some awesomeness</p>
 		<div class="icon-container animated fadeInUp">
-			<a href="http://www.facebook.com/seer.zoltan" target="_blank" class="icon icon-facebook"  onClick="ga.push(['_trackEvent', 'Social', 'Click', 'Facebook']);"></a>
-			<a href="http://twitter.com/zoliseer" target="_blank" class="icon icon-twitter-bird"  onClick="ga.push(['_trackEvent', 'Social', 'Click', 'Twitter']);"></a>
-			<a href="mailto:zoltan.seer@gmail.com" class="icon icon-email"  onClick="ga.push(['_trackEvent', 'Social', 'Click', 'E-Mail']);"></a>
+			<a href="http://www.facebook.com/seer.zoltan" target="_blank" class="icon icon-facebook js-track" data-ga-category="social_button" data-ga-action="click" data-ga-label="facebook"></a>
+			<a href="http://twitter.com/zoliseer" target="_blank" class="icon icon-twitter-bird js-track" data-ga-category="social_button" data-ga-action="click" data-ga-label="twitter"></a>
+			<a href="mailto:zoltan.seer@gmail.com" class="icon icon-email js-track" data-ga-category="social_button" data-ga-action="click" data-ga-label="email"></a>
 		</div>
 	</div>
 
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -40,6 +41,28 @@
   ga('create', 'UA-34824716-2', 'zoltanseer.info');
   ga('send', 'pageview');
 
-</script>
+	</script>
+	<script type="text/javascript" src="assets/js/boba.js"></script>
+	<script type="text/javascript">
+	(function ($, Obj, undefined) {
+		var tracker;
+		Obj.init = function () {
+			init_tracking();
+		}
+
+		init_tracking = function () {
+			tracker = new Boba({
+				siteName: "Zoltan Seer's playground",
+				pageName: "Startpage"
+			});
+
+			tracker.watch('click', '.js-track', function (event) {
+			  return $(event.currentTarget).data()
+			});
+		}
+	}(jQuery, window.Obj = window.Obj || {}));
+
+	Obj.init();
+	</script>
 </body>
 </html>
